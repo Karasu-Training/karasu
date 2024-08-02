@@ -4,8 +4,8 @@ import pytest
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
 
-from src.karasu.models.base import Base
 from src.karasu.models.models import (
+    Base,
     Exercise,
     Program,
     Block,

@@ -3,12 +3,14 @@ from uuid import UUID, uuid4
 
 from sqlalchemy import ForeignKey
 from sqlalchemy.dialects.sqlite import JSON
-from sqlalchemy.orm import Mapped, mapped_column, relationship
+from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
 
 from sqlalchemy.ext.associationproxy import AssociationProxy, association_proxy
 from sqlalchemy.ext.orderinglist import ordering_list
 
-from .base import Base
+
+class Base(DeclarativeBase):
+    pass
 
 
 class Program(Base):
